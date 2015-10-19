@@ -15,7 +15,7 @@ BEGIN
 	dbms_output.put_line('Student table created');
 	execute immediate command2;
 	dbms_output.put_line('Course table created');
---	execute immediate command3;
+	execute immediate command3;
 	dbms_output.put_line('Grade table created');
 
 END;
