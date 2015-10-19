@@ -17,9 +17,9 @@ grade
 */
 
 DECLARE
-	drop1 varchar2(100) := 'DROP TABLE IF EXISTS Stduent';
-	drop2 varchar2(100) := 'DROP TABLE IF EXISTS Course';
-	drop3 varchar2(100) := 'DROP TABLE IF EXISTS Grade';
+	--drop1 varchar2(100) := 'DROP TABLE IF EXISTS Stduent';
+	--drop2 varchar2(100) := 'DROP TABLE IF EXISTS Course';
+	--drop3 varchar2(100) := 'DROP TABLE IF EXISTS Grade';
 
 	command1 varchar2(200) := 'CREATE TABLE Student (s_ID integer PRIMARY KEY, s_name varchar2(14) NOT NULL, s_birth varchar2(9), s_addr varchar2(10), UNIQUE(s_name))';
 	
@@ -28,9 +28,9 @@ DECLARE
 	command3 varchar2(200) := 'CREATE TABLE Grade (student integer, course varchar2(9), integer mark, PRIMARY KEY (student, course), FOREIGN KEY (student) REFERENCES Student(s_ID), FOREIGN KEY (course) REFERENCES Course(c_ID))';
 
 BEGIN
-	execute immediate drop1;
-	execute immediate drop2;
-	execute immediate drop3;
+	--execute immediate drop1;
+	--execute immediate drop2;
+	--execute immediate drop3;
 
 
 	execute immediate command1;
