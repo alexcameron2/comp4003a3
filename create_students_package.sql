@@ -3,10 +3,10 @@ CREATE OR REPLACE PACKAGE Students AS
 	PROCEDURE add_student(name Student.s_name%type);
 
 	-- Add a student by name and birthday
-	PROCEDURE add_student(name Student.s_name%type, birthdate Student.s_brith%type);
+	PROCEDURE add_student(name Student.s_name%type, birthdate Student.s_birth%type);
 
 	-- Add a student by name birthday and address
-	PROCEDURE add_student(name Student.s_name%type, birthdate Student.s_brith%type, address Student.s_addr%type);
+	PROCEDURE add_student(name Student.s_name%type, birthdate Student.s_birth%type, address Student.s_addr%type);
 
 	-- Delete a Student
 	PROCEDURE delete_student(name Student.s_name%type);

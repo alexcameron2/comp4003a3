@@ -2,7 +2,7 @@ CREATE OR REPLACE PACKAGE BODY Students AS
 	
 	PROCEDURE add_student(name Student.s_name%type) IS
 		id Student.s_ID%type;
-		myException EXCEPTION;
+		myException EXCEPTION
 		BEGIN
 			IF EXISTS (SELECT * FROM Student WHERE s_name = name) THEN
 				RAISE myException;
@@ -22,7 +22,7 @@ CREATE OR REPLACE PACKAGE BODY Students AS
 	
 	PROCEDURE add_student(name Student.s_name%type, birthdate Student.s_birth%type) IS
 		id Student.s_ID%type;
-		myException EXCEPTION;
+		myException EXCEPTION
 		BEGIN
 			IF EXISTS (SELECT * FROM Student WHERE s_name = name) THEN
 				RAISE myException;
@@ -41,7 +41,7 @@ CREATE OR REPLACE PACKAGE BODY Students AS
 	
 	PROCEDURE add_student(name Student.s_name%type, birthdate Student.s_birth%type, address Student.s_addr%type) IS
 		id Student.s_ID%type;
-		myException EXCEPTION;
+		myException EXCEPTION
 		BEGIN
 			IF EXISTS (SELECT * FROM Student WHERE s_name = name) THEN
 				RAISE myException;
@@ -60,7 +60,7 @@ CREATE OR REPLACE PACKAGE BODY Students AS
 	END add_student;
 	
 	PROCEDURE delete_student(name Student.s_name%type) IS
-		myException EXCEPTION;
+		myException EXCEPTION
 		BEGIN
 			IF NOT EXISTS (SELECT * FROM Student WHERE name = s_name) THEN
 				RAISE myException;
