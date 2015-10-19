@@ -24,11 +24,6 @@ DECLARE
 	command3 varchar2(200) := 'CREATE TABLE Grade (student integer, course varchar2(9), integer mark, PRIMARY KEY (student, course), FOREIGN KEY (student) REFERENCES Student(s_ID), FOREIGN KEY (course) REFERENCES Course(c_ID))';
 
 BEGIN
-	execute immediate "DROP TABLE IF EXISTS Student";
-	execute immediate "DROP TABLE IF EXISTS Course";
-	execute immediate "DROP TABLE IF EXISTS Grade";
-
-
 	execute immediate command1;
 	dbms_output.put_line('Student table created');
 	execute immediate command2;
